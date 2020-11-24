@@ -5,8 +5,8 @@ const { app, BrowserWindow } = require('electron');
 function createWindow() {
     //Объект параметров окна
     const win = new BrowserWindow({
-        width: 800,
-        height: 600,
+        minWidth: 800,
+        minHeight: 600,
         //По моему это на счёт того можно ли юзать node в проэкте
         webPreferences: {
             nodeIntegration: true
@@ -14,7 +14,7 @@ function createWindow() {
     })
 
     //Подгружаем файл
-    win.loadFile('index.html')
+    win.loadFile('screen/index.html')
     //win.webContents.openDevTools()
 }
 
